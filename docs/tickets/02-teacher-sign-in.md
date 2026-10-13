@@ -9,7 +9,7 @@ add, change or delete their sections.
 
 **Status:** todo
 
-- [ ] Supabase URL and publishable key are set locally AND in Vercel
+- [x] Supabase URL and publishable key are set locally AND in Vercel
 - [x] `sections` table created from a numbered SQL file, with RLS on and
       owner-only policies
 - [ ] Justine's account is created in the Supabase dashboard, and public
@@ -18,6 +18,6 @@ add, change or delete their sections.
       sections"; a wrong password is refused
 - [ ] "My sections" reads from the `sections` table and shows "No
       sections yet" when empty
-- [ ] Signed-out visitors cannot open "My sections"
+- [x] Signed-out visitors cannot open "My sections"
 - [ ] Justine can sign out
 - [ ] Works on the live URL
