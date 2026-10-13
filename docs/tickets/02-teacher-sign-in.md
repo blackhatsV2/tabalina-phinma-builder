@@ -10,7 +10,7 @@ add, change or delete their sections.
 **Status:** todo
 
 - [ ] Supabase URL and publishable key are set locally AND in Vercel
-- [ ] `sections` table created from a numbered SQL file, with RLS on and
+- [x] `sections` table created from a numbered SQL file, with RLS on and
       owner-only policies
 - [ ] Justine's account is created in the Supabase dashboard, and public
       sign-up is switched off
