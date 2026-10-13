@@ -8,7 +8,7 @@ a new access code, and the section page lists them.
 
 **Status:** todo
 
-- [ ] `students` table created from a numbered SQL file, with RLS on and
+- [x] `students` table created from a numbered SQL file, with RLS on and
       policies so only the teacher who owns the section can read, add,
       change or delete its students
 - [ ] Justine can choose a CSV file and upload it

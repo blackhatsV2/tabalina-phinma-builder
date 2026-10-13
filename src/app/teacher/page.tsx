@@ -25,10 +25,11 @@ export default async function MySections({
   if (!user) redirect("/teacher/sign-in");
 
   // No filter by teacher needed here: Row Level Security only returns
-  // the sections this teacher owns.
+  // the sections this teacher owns. `students(count)` asks the database
+  // to count each section's students instead of sending every row.
   const { data: sections, error } = await supabase
     .from("sections")
-    .select("id, name, uploaded_at")
+    .select("id, name, uploaded_at, students(count)")
     .order("name");
 
   return (
@@ -83,7 +84,7 @@ export default async function MySections({
                   >
                     <span className="font-medium">{section.name}</span>
                     <span className="text-right text-sm text-muted-foreground">
-                      0 students ·{" "}
+                      {section.students[0]?.count ?? 0} students ·{" "}
                       {section.uploaded_at
                         ? `Uploaded ${formatDate(section.uploaded_at)}`
                         : "Not uploaded yet"}
